@@ -1,0 +1,94 @@
+// NULLING
+@import "null.scss";
+// MIXINS
+@import "mixins.scss";
+
+$fontfamily: 'Verdana',;
+$red: #fe504f;
+$gray: #343434;
+
+body {
+  font-family: $fontfamily, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  @media (max-width: 1250px) {
+      padding: 0 5%;
+    }
+}
+
+.cta {
+  @include flexBox;
+  width: 220px;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 25px;
+
+  transition: box-shadow .4s ease-in;
+
+  &_red {
+    background: $red;
+  }
+  &_gray {
+    background: $gray;
+  }
+  &:hover {
+    cursor: pointer;
+    box-shadow: 4px 7px 20px rgba(1,1,1, 0.3);
+  }
+}
+
+.row {
+
+}
+
+.mainscreen {
+  padding: 68px 0 0 0;
+  min-height: 100vh;
+  background: url("../images/mainscreen/bg.png") no-repeat;
+  background-size: cover;
+
+
+  .offer {
+    &__container {
+      max-width: 680px;
+    }
+    margin: 174px;
+    .title {
+      font-size: 60px;
+      font-weight: bold;
+      color: #fff;
+    }
+    p {
+      margin: 33px 0 46px 0 ;
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+  .cta_group {
+    @include flexBox;
+    justify-content: row;
+    .cta_red {
+      margin: 0 45px 0 0;
+    }
+  }
+}
+
+/*=========Header==============*/
+
+@import "header.scss";
+
+/*=========Main styles=========*/
+
+
+
+//Styles
+
+/*=========Footer==============*/
+@import "footer.scss";
