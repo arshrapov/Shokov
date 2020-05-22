@@ -45,7 +45,56 @@ body {
 }
 
 .row {
+  @include flexBox;
+  flex-direction: column;
+  text-align: center;
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: $gray;
+  }
+  &__text {
+    margin: 31px 0 61px 0;
+    font-size: 16px;
+    color: #fafaf;
+  }
+  &__inner {
+    @include flexBox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .inner__item {
+      margin: 57px 0 0 0;
+      @include flexBox;
+      width: 21%;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      &__title {
+        margin: 16px 0 15px;
+        @include flexBox;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: bold;
+        color: $gray;
+        align-items: center;
+        &:after {
+          display: block;
+          margin: 3px 0;
+          content: "";
+          display: block;
+          margin: 2px;
+          width: 61px;
+          height: 3px;
+          background: $red;
+        }
+      }
+      &__text {
 
+      }
+    }
+  }
 }
 
 .mainscreen {
@@ -86,7 +135,9 @@ body {
 
 /*=========Main styles=========*/
 
+.services {
 
+}
 
 //Styles
 
